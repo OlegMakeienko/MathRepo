@@ -1,16 +1,20 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Task_acmp118_Iosif_Flavij {
+public class Task_acmp643_Key {
 
     void solve(Scanner in, PrintWriter out) {
         int n = in.nextInt();
-        int step = in.nextInt();
-        int pos = 0;
-        for (int len = 2; len <= n; len++) {
-             pos = (step + pos) % len;
+        int n0 = n;
+        int count = 0;
+        while (n > 0) {
+            if (n % 2 == 1) {
+                count++;
+            }
+            n /= 2;
         }
-        System.out.println(pos + 1);
+        System.out.println(n0 + count);
+
     }
 
     void run() {
@@ -27,6 +31,6 @@ public class Task_acmp118_Iosif_Flavij {
     public static void main(String[] args) {
 
 
-        new Task_acmp118_Iosif_Flavij().run();
+        new Task_acmp643_Key().run();
     }
 }

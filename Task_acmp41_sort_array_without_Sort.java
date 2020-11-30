@@ -36,6 +36,6 @@ public class Task_acmp41_sort_array_without_Sort {
     public static void main(String[] args) {
 
 
-        new Task_acmp41().run();
+        new Task_acmp41_sort_array_without_Sort().run();
     }
 }

@@ -1,7 +1,7 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Task_acmp313_with_rapid_Scanner {
+public class Task_amp313_with_standard_Scanner {
 
     void solve(Scanner in, PrintWriter out) {
         int n = in.nextInt();
@@ -32,6 +32,6 @@ public class Task_acmp313_with_rapid_Scanner {
     public static void main(String[] args) {
 
 
-        new Task_acmp313_with_rapid_Scanner().run();
+        new Task_amp313_with_standard_Scanner().run();
     }
 }

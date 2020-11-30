@@ -1,8 +1,6 @@
 import java.io.*;
-import java.util.Scanner;
-import java.util.StringTokenizer;
 
-public class Task_amp313_with_rapid_Scanner {
+public class Task_amp313_with_super_rapid_Scanner {
 
     static class Assert {
         static void check (boolean e) {
@@ -18,22 +16,20 @@ public class Task_amp313_with_rapid_Scanner {
 
         Scanner (InputStream is) {
             in = new StreamTokenizer(new InputStreamReader(new BufferedInputStream(is)));
-            in.resetSyntax();
-            in.whitespaceChars(0, 32);
-            in.wordChars(33, 255);
+
         }
-        String next() {
+        int nextInt() {
             try {
                 in.nextToken();
-                Assert.check(in.ttype == StreamTokenizer.TT_WORD);
-                return in.sval;
+                Assert.check(in.ttype == StreamTokenizer.TT_NUMBER);
+                int value = (int)in.nval;
+                Assert.check(value == in.nval);
+                return value;
+
             }
             catch (IOException e) {
                 throw new IOError(e);
             }
-        }
-        int nextInt() {
-            return Integer.parseInt(next());
         }
 
         @Override
@@ -71,6 +67,6 @@ public class Task_amp313_with_rapid_Scanner {
     public static void main(String[] args) {
 
 
-        new Task_amp313_with_rapid_Scanner().run();
+        new Task_amp313_with_super_rapid_Scanner().run();
     }
 }

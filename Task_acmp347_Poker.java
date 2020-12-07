@@ -1,14 +1,15 @@
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
-public class Task_acmp347 {
+public class Task_acmp347_Poker {
 
     void solve(Scanner in, PrintWriter out) {
+        Random r = new Random();
         int [] poker = new int [5];
         for (int i = 0; i < 5; i++) {
-            poker [i] = in.nextInt();
+            poker [i] = r.nextInt(13) + 1;
         }
         System.out.println(Arrays.toString(poker));
 
@@ -63,6 +64,6 @@ public class Task_acmp347 {
     public static void main(String[] args) {
 
 
-        new Task_acmp347().run();
+        new Task_acmp347_Poker().run();
     }
 }

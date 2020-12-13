@@ -1,20 +1,17 @@
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class Task_acmp643_Key {
+public class Task_acmp633 {
 
     void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
-        int n0 = n;
-        int count = 0;
-        while (n > 0) {
-            if (n % 2 == 1) {
-                count++;
-            }
-            n /= 2;
+        String teamName = in.nextLine();
+        String [] members = new String[3];
+        for (int i = 0; i < 3; i++) {
+        members[i] = in.nextLine();
         }
-        System.out.println(n0 + count);
-
+        Arrays.sort(members);
+        System.out.println(teamName + ": " + members[0] + ", " + members[1] + ", " + members[2]);
     }
 
     void run() {
@@ -31,6 +28,6 @@ public class Task_acmp643_Key {
     public static void main(String[] args) {
 
 
-        new Task_acmp643_Key().run();
+        new Task_acmp633().run();
     }
 }

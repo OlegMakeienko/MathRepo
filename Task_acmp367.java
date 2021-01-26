@@ -1,23 +1,21 @@
 import java.io.PrintWriter;
+import java.math.BigInteger;
 import java.util.Scanner;
 
-public class Task_acmp543 {
+public class Task_acmp367 {
 
     void solve(Scanner in, PrintWriter out) {
+        BigInteger a = in.nextBigInteger();
         int n = in.nextInt();
-        int weight = in.nextInt();
-        int delta = in.nextInt();
-        int sumWeight = in.nextInt();
-        int allRealWeight = n * (n - 1) / 2 * weight;
-        int basket0 = (allRealWeight - sumWeight) / delta;  //0...n-1
-        int basket1 = (basket0 + n - 1) % n + 1; // 1....n
-        System.out.println(basket1);
+        BigInteger res = a.pow(n);
+        System.out.println(res);
     }
 
     void run() {
         try {
             Scanner in = new Scanner(System.in);
             PrintWriter out = new PrintWriter(System.out);
+
             solve(in, out);
             }
             catch (Exception e) {
@@ -27,6 +25,6 @@ public class Task_acmp543 {
     public static void main(String[] args) {
 
 
-        new Task_acmp543().run();
+        new Task_acmp367().run();
     }
 }
